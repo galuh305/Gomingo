@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Nova - Bootstrap 5 Template</title>
+    <title>GoMinGo</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Place favicon.ico in the root directory -->
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/tiny-slider.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/lindy-uikit.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+
 
 </head>
 
@@ -57,7 +59,8 @@
                         <div class="col-lg-12">
                             <nav class="navbar navbar-expand-lg">
                                 <a class="navbar-brand" href="index.html">
-                                    <img src="{{ asset('assets/img/logo/logogo.png') }}" alt="Logo" width="120" height="120"/>
+                                    <img src="{{ asset('assets/img/logo/logogo.png') }}" alt="Logo" width="100"
+                                        height="100" />
                                 </a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarSupportedContent6" aria-controls="navbarSupportedContent6"
@@ -70,22 +73,13 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent6">
                                     <ul id="nav6" class="navbar-nav ms-auto">
                                         <li class="nav-item">
-                                            <a class="page-scroll" href="#feature">Peta Wisata</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle page-scroll" href="#"
-                                                id="wisataDropdown" role="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                Tour Guide
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="wisataDropdown">
-                                                <li><a class="dropdown-item" href="#kuliner">Tour Guide Wisata Alam</a></li>
-                                                <li><a class="dropdown-item" href="#budaya">Tour Guide Wisata Kuliner</a></li>
-                                                <li><a class="dropdown-item" href="#religi">Tour Guide Wisata Budaya</a></li>
-                                            </ul>
+                                            <a class="page-scroll" href="#about">Peta Wisata</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="page-scroll" href="#contact">Event</a>
+                                            <a class="page-scroll" href="{{ url('/tourguide') }}">Tour Guide</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="page-scroll" href="{{ url('/event') }}">Event</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="page-scroll active" href="{{ url('/login') }}">Login</a>
@@ -117,11 +111,11 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="hero-content-wrapper">
-                            <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">You're Using Free Lite Version</h2>
-                            <p class="mb-30 wow fadeInUp" data-wow-delay=".4s">Please purchase full version of the
-                                template to get all sections and permission to use with commercial projects.</p>
-                            <a href="#0" class="button button-lg radius-50 wow fadeInUp"
-                                data-wow-delay=".6s">Get Started <i class="lni lni-chevron-right"></i> </a>
+                            <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Jelajahi Keindahan Wisata Sumatera Barat</h2>
+                            <p class="mb-30 wow fadeInUp" data-wow-delay=".4s">Sekarang Anda bisa menjelajahi wisata-wisata 
+                                unik di Sumatera Barat dengan Tour Guide terverifikasi.</p>
+                            <a href="#0" class="button button-lg radius-50 wow fadeInUp" data-wow-delay=".6s">Get
+                                Started <i class="lni lni-chevron-right"></i> </a>
                         </div>
                     </div>
                     <div class="col-lg-6 align-self-end">
@@ -144,7 +138,8 @@
                 <div class="col-xxl-5 col-xl-5 col-lg-7 col-md-8">
                     <div class="section-title text-center mb-60">
                         <h3 class="mb-15 wow fadeInUp" data-wow-delay=".2s">GoMinGo</h3>
-                        <p class="wow fadeInUp" data-wow-delay=".4s">Rencakan Perjalanan Anda!</p>
+                        <p class="wow fadeInUp" data-wow-delay=".4s">Website yang memberikan peta interaktif agar Anda bisa menentukan
+                             liburan Anda serta Anda bisa mendapatkan informasi tour guide bersertifikasi untuk memandu liburan Anda!</p>
                     </div>
                 </div>
             </div>
@@ -153,7 +148,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
                         <div class="icon">
-                            <i class="lni lni-vector"></i>
+                            <i class="lni lni-map"></i>
                             <svg width="110" height="72" viewBox="0 0 110 72" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -162,15 +157,15 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h5>Graphics Design</h5>
-                            <p>Short description for the ones who look for something new.</p>
+                            <h5>Peta Interaktif</h5>
+                            <p>Jelajahi berbagai destinasi wisata di Sumatera Barat dengan peta interaktif kami.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
                         <div class="icon">
-                            <i class="lni lni-pallet"></i>
+                            <i class="lni lni-direction-alt"></i>
                             <svg width="110" height="72" viewBox="0 0 110 72" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -179,15 +174,15 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h5>Print Design</h5>
-                            <p>Short description for the ones who look for something new.</p>
+                            <h5>Tour Guide</h5>
+                            <p>Temukan tour guide bersertifikasi untuk memandu liburan Anda di Sumatera Barat.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
                         <div class="icon">
-                            <i class="lni lni-stats-up"></i>
+                            <i class="lni lni-ticket"></i>
                             <svg width="110" height="72" viewBox="0 0 110 72" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -196,62 +191,12 @@
                             </svg>
                         </div>
                         <div class="content">
-                            <h5>Business Analysis</h5>
-                            <p>Short description for the ones who look for something new.</p>
+                            <h5>Event</h5>
+                            <p>Temukan berbagai event menarik di Sumatera Barat yang dapat Anda ikuti.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
-                        <div class="icon">
-                            <i class="lni lni-code-alt"></i>
-                            <svg width="110" height="72" viewBox="0 0 110 72" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M110 54.7589C110 85.0014 85.3757 66.2583 55 66.2583C24.6243 66.2583 0 85.0014 0 54.7589C0 24.5164 24.6243 0 55 0C85.3757 0 110 24.5164 110 54.7589Z"
-                                    fill="#EBF4FF" />
-                            </svg>
-                        </div>
-                        <div class="content">
-                            <h5>Web Development</h5>
-                            <p>Short description for the ones who look for something new.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
-                        <div class="icon">
-                            <i class="lni lni-lock"></i>
-                            <svg width="110" height="72" viewBox="0 0 110 72" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M110 54.7589C110 85.0014 85.3757 66.2583 55 66.2583C24.6243 66.2583 0 85.0014 0 54.7589C0 24.5164 24.6243 0 55 0C85.3757 0 110 24.5164 110 54.7589Z"
-                                    fill="#EBF4FF" />
-                            </svg>
-                        </div>
-                        <div class="content">
-                            <h5>Best Security</h5>
-                            <p>Short description for the ones who look for something new.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                        <div class="icon">
-                            <i class="lni lni-code"></i>
-                            <svg width="110" height="72" viewBox="0 0 110 72" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M110 54.7589C110 85.0014 85.3757 66.2583 55 66.2583C24.6243 66.2583 0 85.0014 0 54.7589C0 24.5164 24.6243 0 55 0C85.3757 0 110 24.5164 110 54.7589Z"
-                                    fill="#EBF4FF" />
-                            </svg>
-                        </div>
-                        <div class="content">
-                            <h5>Web Design</h5>
-                            <p>Short description for the ones who look for something new.</p>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
         </div>
@@ -259,225 +204,152 @@
     <!-- ========================= feature style-5 end ========================= -->
 
     <!-- ========================= about style-4 start ========================= -->
-    <section id="about" class="about-section about-style-4">
+    <section id="about" class="about-section about-style-4"
+        style="background-image: url('{{ asset('assets/img/about/about-4/peta.jpg') }}');
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+           position: relative;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-5 col-lg-6">
                     <div class="about-content-wrapper">
                         <div class="section-title mb-30">
-                            <h3 class="mb-25 wow fadeInUp" data-wow-delay=".2s">The future of designing starts here
-                            </h3>
-                            <p class="wow fadeInUp" data-wow-delay=".3s">Stop wasting time and money designing and
-                                managing a website that doesn’t get results. Happiness guaranteed,</p>
+                            <h3 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Peta Interaktif Wisata</h3>
+                            <p class="wow fadeInUp" data-wow-delay=".3s">Sekarang Anda bisa mengetahui titik lokasi
+                                wisata dengan data yang informatif.</p>
                         </div>
                         <ul>
                             <li class="wow fadeInUp" data-wow-delay=".35s">
                                 <i class="lni lni-checkmark-circle"></i>
-                                Stop wasting time and money designing and managing a website that doesn’t get results.
+                                Wisata Alam : Keindahan Wisata alam di Sumatera Barat.
                             </li>
                             <li class="wow fadeInUp" data-wow-delay=".4s">
                                 <i class="lni lni-checkmark-circle"></i>
-                                Stop wasting time and money designing and managing.
+                                Wisata Kuliner : Menjelajahi kuliner-kuliner di Sumatera Barat .
                             </li>
                             <li class="wow fadeInUp" data-wow-delay=".45s">
                                 <i class="lni lni-checkmark-circle"></i>
-                                Stop wasting time and money designing and managing a website that doesn’t get results.
+                                Wisata Budaya : Menjelajahi keragaman budaya yang ada di Sumatera Barat.
                             </li>
                         </ul>
-                        <a href="#0" class="button button-lg radius-10 wow fadeInUp" data-wow-delay=".5s">Learn
-                            More</a>
+                        <a href="{{ url('/jelajahi') }}" class="button button-lg radius-10 wow fadeInUp" data-wow-delay=".5s">Jelajahi</a>
                     </div>
                 </div>
-                <div class="col-xl-7 col-lg-6">
+                {{-- <div class="col-xl-7 col-lg-6">
                     <div class="about-image text-lg-right wow fadeInUp" data-wow-delay=".5s">
                         <img src="{{ asset('assets/img/about/about-4/about-img.svg') }}" alt="">
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
     <!-- ========================= about style-4 end ========================= -->
 
     <!-- ========================= pricing style-4 start ========================= -->
-    <section id="pricing" class="pricing-section pricing-style-4 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-5 col-lg-6">
-                    <div class="section-title mb-60">
-                        <h3 class="mb-15 wow fadeInUp" data-wow-delay=".2s">Pricing Plan</h3>
-                        <p class="wow fadeInUp" data-wow-delay=".4s">Stop wasting time and money designing and
-                            managing a website that doesn’t get results. Happiness guaranteed!Stop wasting time and
-                            money designing and managing a website that doesn’t get results. Happiness guaranteed!</p>
-                    </div>
-                </div>
-                <div class="col-xl-7 col-lg-6">
-                    <div class="pricing-active-wrapper wow fadeInUp" data-wow-delay=".4s">
-                        <div class="pricing-active">
-                            <div class="single-pricing-wrapper">
-                                <div class="single-pricing">
-                                    <h6>Basic Design</h6>
-                                    <h4>Web Design</h4>
-                                    <h3>$ 29.00</h3>
-                                    <ul>
-                                        <li>Carefully crafted components</li>
-                                        <li>Amazing page examples</li>
-                                        <li>Super friendly support team</li>
-                                        <li>Awesome Support</li>
-                                    </ul>
-                                    <a href="#0" class="button radius-30">Get Started</a>
-                                </div>
-                            </div>
-                            <div class="single-pricing-wrapper">
-                                <div class="single-pricing">
-                                    <h6>Standard Design</h6>
-                                    <h4>Web Development</h4>
-                                    <h3>$ 89.00</h3>
-                                    <ul>
-                                        <li>Carefully crafted components</li>
-                                        <li>Amazing page examples</li>
-                                        <li>Super friendly support team</li>
-                                        <li>Awesome Support</li>
-                                    </ul>
-                                    <a href="#0" class="button radius-30">Get Started</a>
-                                </div>
-                            </div>
-                            <div class="single-pricing-wrapper">
-                                <div class="single-pricing">
-                                    <h6>Pro Design</h6>
-                                    <h4>Design & Develop</h4>
-                                    <h3>$ 199.00</h3>
-                                    <ul>
-                                        <li>Carefully crafted components</li>
-                                        <li>Amazing page examples</li>
-                                        <li>Super friendly support team</li>
-                                        <li>Awesome Support</li>
-                                    </ul>
-                                    <a href="#0" class="button radius-30">Get Started</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!-- ========================= pricing style-4 end ========================= -->
+    <section id="wisata" class="katalog-wisata-section pt-100 pb-100">
+  <div class="container">
+    <div class="section-title text-center mb-60">
+      <h2>Katalog Tempat Wisata</h2>
+      <p>Temukan berbagai destinasi wisata menarik dan pilih tour guide favoritmu.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="single-pricing-wrapper">
+          <div class="single-pricing">
+            <div class="img-wrapper">
+              <img src="{{ asset('assets/img/wisata/foto1.jpeg') }}" alt="Pantai" class="img-fluid">
+            </div>
+            <h4>Pantai Padang</h4>
+            <p>Kota Padang, Sumatera Barat</p>
+            {{-- <ul>
+              <li>🌅 Pemandangan laut yang indah</li>
+              <li>🏖️ Tersedia spot foto & kuliner</li>
+              <li>🕒 Buka: 08.00 - 18.00 WIB</li>
+            </ul> --}}
+            <a href="#0" class="button radius-30">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="single-pricing-wrapper">
+          <div class="single-pricing">
+            <div class="img-wrapper">
+              <img src="{{ asset('assets/img/wisata/foto1.jpeg') }}" alt="Danau Maninjau" class="img-fluid">
+            </div>
+            <h4>Danau Maninjau</h4>
+            <p>Agam, Sumatera Barat</p>
+            {{-- <ul>
+              <li>🚣 Wisata perahu & spot sunset</li>
+              <li>🏞️ Alam pegunungan yang sejuk</li>
+              <li>📍 Dekat penginapan & kuliner</li>
+            </ul> --}}
+            <a href="#0" class="button radius-30">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="single-pricing-wrapper">
+          <div class="single-pricing">
+            <div class="img-wrapper">
+              <img src="{{ asset('assets/img/wisata/foto1.jpeg') }}" alt="Ngarai Sianok" class="img-fluid">
+            </div>
+            <h4>Ngarai Sianok</h4>
+            <p>Bukittinggi, Sumatera Barat</p>
+            {{-- <ul>
+              <li>🏞️ Tebing megah & lembah hijau</li>
+              <li>📸 Spot foto populer</li>
+              <li>🎟️ Tiket: Rp 15.000</li>
+            </ul> --}}
+            <a href="#0" class="button radius-30">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- ========================= contact-style-3 start ========================= -->
-    <section id="contact" class="contact-section contact-style-3">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xxl-5 col-xl-5 col-lg-7 col-md-10">
-                    <div class="section-title text-center mb-50">
-                        <h3 class="mb-15">Get in touch</h3>
-                        <p>Stop wasting time and money designing and managing a website that doesn’t get results.
-                            Happiness guaranteed!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="contact-form-wrapper">
-                        <form action="" method="">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="single-input">
-                                        <input type="text" id="name" name="name" class="form-input"
-                                            placeholder="Name">
-                                        <i class="lni lni-user"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="single-input">
-                                        <input type="email" id="email" name="email" class="form-input"
-                                            placeholder="Email">
-                                        <i class="lni lni-envelope"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="single-input">
-                                        <input type="text" id="number" name="number" class="form-input"
-                                            placeholder="Number">
-                                        <i class="lni lni-phone"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="single-input">
-                                        <input type="text" id="subject" name="subject" class="form-input"
-                                            placeholder="Subject">
-                                        <i class="lni lni-text-format"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="single-input">
-                                        <textarea name="message" id="message" class="form-input" placeholder="Message" rows="6"></textarea>
-                                        <i class="lni lni-comments-alt"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-button">
-                                        <button type="submit" class="button"> <i
-                                                class="lni lni-telegram-original"></i> Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="left-wrapper">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-6">
-                                <div class="single-item">
-                                    <div class="icon">
-                                        <i class="lni lni-phone"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>0045939863784</p>
-                                        <p>+004389478327</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-6">
-                                <div class="single-item">
-                                    <div class="icon">
-                                        <i class="lni lni-envelope"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>yourmail@gmail.com</p>
-                                        <p>admin@yourwebsite.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-6">
-                                <div class="single-item">
-                                    <div class="icon">
-                                        <i class="lni lni-map-marker"></i>
-                                    </div>
-                                    <div class="text">
-                                        <p>John's House, 13/5 Road, Sidny United State Of America</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- ========================= contact-style-3 end ========================= -->
 
     <!-- ========================= clients-logo start ========================= -->
     <section class="clients-logo-section pt-100 pb-100">
-        <div class="container">
+        <div class="container text-center">
+            <div class="section-title mb-50">
+                <h2 class="wow fadeInUp" data-wow-delay=".2s">Partner</h2>
+                <p class="wow fadeInUp" data-wow-delay=".3s">
+                    Kolaborasi dengan berbagai instansi dan komunitas wisata terbaik.
+                </p>
+            </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="client-logo wow fadeInUp" data-wow-delay=".2s">
-                        <img src="{{ asset('assets/img/clients/brands.svg') }}" alt="" class="w-100">
+                <div class="row justify-content-center align-items-center g-4">
+                    <div class="col-6 col-md-3 col-lg-2 wow fadeInUp" data-wow-delay=".1s">
+                        <img src="{{ asset('assets/img/clients/logo/logo1.jpeg') }}" class="img-fluid partner-logo"
+                            alt="Partner 1">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 wow fadeInUp" data-wow-delay=".2s">
+                        <img src="{{ asset('assets/img/clients/logo/logo2.jpeg') }}" class="img-fluid partner-logo"
+                            alt="Partner 2">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                        <img src="{{ asset('assets/img/clients/logo/logo3.jpeg') }}" class="img-fluid partner-logo"
+                            alt="Partner 3">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 wow fadeInUp" data-wow-delay=".4s">
+                        <img src="{{ asset('assets/img/clients/logo/logo4.jpeg') }}" class="img-fluid partner-logo"
+                            alt="Partner 4">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 wow fadeInUp" data-wow-delay=".5s">
+                        <img src="{{ asset('assets/img/clients/logo/logo5.jpeg') }}" class="img-fluid partner-logo"
+                            alt="Partner 5">
                     </div>
                 </div>
             </div>
@@ -493,7 +365,8 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget wow fadeInUp" data-wow-delay=".2s">
                             <div class="logo">
-                                <a href="#0"> <img src="{{ asset('assets/img/logo/logo.svg') }}" alt="">
+                                <a href="#0"> <img src="{{ asset('assets/img/logo/logogo.png') }}" width="100" height="100"
+                                        alt="">
                                 </a>
                             </div>
                             <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis nulla
@@ -549,11 +422,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="copyright-wrapper wow fadeInUp" data-wow-delay=".2s">
-                <p>Design and Developed by <a href="https://uideck.com" rel="nofollow" target="_blank">UIdeck</a>
-                    Built-with <a href="https://uideck.com" rel="nofollow" target="_blank">Lindy UI Kit</a>.
-                    Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
             </div>
         </div>
     </footer>
