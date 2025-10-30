@@ -7,6 +7,7 @@
     <title>Modernize Free</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset('assetsadmin/images/logos/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('assetsadmin/css/styles.min.css') }}" />
+    @stack('styles')
 </head>
 
 <body>
@@ -33,86 +34,49 @@
                             <span class="hide-menu">Home</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="{{ url('/datawisata') }}" aria-expanded="false">
+                            <a class="sidebar-link" href="{{ route('dashboard') }}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                        <li class="nav-small-cap">
-                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">Data Tempat Wisata</span>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="{{ url('/daftarwisata') }}" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Daftar</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-file-description"></i>
-                                </span>
-                                <span class="hide-menu">Edit Data</span>
-                            </a>
-                        </li>
-                        <li class="nav-small-cap">
-                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">Data Tour Guide</span>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="{{ url('/daftartourguide') }}" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Daftar</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-file-description"></i>
-                                </span>
-                                <span class="hide-menu">Edit Data</span>
-                            </a>
-                        </li>
-                        <li class="nav-small-cap">
-                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">Data Event</span>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="{{ url('/daftarevent') }}" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-article"></i>
-                                </span>
-                                <span class="hide-menu">Daftar</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-file-description"></i>
-                                </span>
-                                <span class="hide-menu">Edit Data</span>
-                            </a>
-                        </li>
-                        <li class="nav-small-cap">
+                        @if(Auth::check() && Auth::user()->role === 'tempat_wisata')
+                            <li class="nav-small-cap">
+                                <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                                <span class="hide-menu">Data Tempat Wisata</span>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{{ route('tempatwisata.index') }}" aria-expanded="false">
+                                    <span><i class="ti ti-article"></i></span>
+                                    <span class="hide-menu">Daftar Tempat Wisata</span>
+                                </a>
+                            </li>
+                        @elseif(Auth::check() && Auth::user()->role === 'tour_guide')
+                            <li class="nav-small-cap">
+                                <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                                <span class="hide-menu">Data Tour Guide</span>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{{ route('tourguide.index') }}" aria-expanded="false">
+                                    <span><i class="ti ti-article"></i></span>
+                                    <span class="hide-menu">Profil Tour Guide</span>
+                                </a>
+                            </li>
+                        @endif
+                        <li class="nav-small-cap mt-4">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">Action</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="{{ url('/home') }}" aria-expanded="false">
-                                <span>
-                                    <i class="ti ti-login"></i>
-                                </span>
-                                <span class="hide-menu">LogOut</span>
-                            </a>
+                            <form method="POST" action="{{ url('/logout') }}">
+                                @csrf
+                                <button class="sidebar-link btn btn-link w-100 text-start" style="padding-left:2rem;" type="submit">
+                                    <span><i class="ti ti-login"></i></span>
+                                    <span class="hide-menu">LogOut</span>
+                                </button>
+                            </form>
                         </li>
-
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
